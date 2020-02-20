@@ -1,0 +1,32 @@
+﻿@model BirthdayParty.Models.guestModel
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link href="~/Contents/style.css" rel="stylesheet" />
+    <style>
+        body {
+            background-image: url('../../bck.jpg');
+           
+        }
+    </style>
+    <meta charset="utf-8" />
+</head>
+<body>
+    <div id="Thankscontent">
+        <h2>Thank you @Model.FirstName,</h2>
+        <p>
+            @if (Model.AreYouComing == true)
+            {
+                @:Your drinks and cake will be waiting for you!
+        }
+            else
+            {
+                @: There is no problem, thanks for letting me know on time.
+        }
+
+        </p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,83 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+
+    <style>
+        body {
+            font-size: 14px;
+        }
+
+        #headText {
+            text-align: center;
+            font-family: 'Lucida Sans', Arial, sans-serif;
+            font-size: 140%;
+        }
+
+        #headMsg {
+            text-align: center;
+            font-size: 120%;
+        }
+
+        #myslide {
+            width: 400px;
+            height: 400px;
+            border-radius: 50%;
+            border: 3px solid #ff6a00;
+            margin-left: 30%;
+            box-shadow: 0 0 30px #00ffff;
+            margin-left: 470px;
+        }
+    
+        #contect{
+            text-align: center;
+        }
+   
+        #bdform{
+            font-size: 170%;
+        }
+    
+     </style>
+
+    <title>Index</title>
+</head>
+
+<body>
+    <div id="">
+        <img src="/Images/1.jpg" name="myslide" id="myslide" style=" " />
+    </div>
+
+    <div id="contect">
+        <p id="headText">Happy Birthday!<br /><hr /></p>
+        <p id="headMsg">
+            @{ string sms;
+                string Greetings;
+                var greetings = DateTime.Now.Hour;
+                if (greetings < 12)
+                {
+                    sms = "Goodmorning";
+                }
+                else
+                {
+                    sms = "GoodAfternoon";
+                }
+                Greetings = sms + ", welcome to my birthday invitaion playform.";
+            }
+            @Greetings
+        </p>
+        <p id="bdform">@Html.ActionLink("Register","Register")</p>
+        <p>Something else can go here...</p>
+    </div>
+
+
+
+
+    <script type="text/javascript" src="~/Scripts/mySlide.js"></script>
+</body>
+</html>
